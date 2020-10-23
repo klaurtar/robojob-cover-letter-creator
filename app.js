@@ -9,7 +9,7 @@ dotenv.config();
 const coverLetterBody = 'bla bala ...';
 
 app.get('/cover-letter', (req, res) => {
-    const title = req.body?.title || 'test title';
+    const title = 'test title';
     const coverLetter = title + coverLetterBody;
 
     res.setHeader("Content-Type", "application/octet-stream");
