@@ -1,9 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const dateFormat = require('./utils/dateFormat');
+const cors = require('cors');
 
 const app = express();
 dotenv.config();
+
+app.use(cors());
 
 async function generatePdf(html) { 
     const puppeteer = require("puppeteer");
